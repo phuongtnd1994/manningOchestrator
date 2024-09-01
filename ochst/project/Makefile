@@ -9,3 +9,4 @@ deploy_test:
 	@echo "Delpoying test binary"
 	cd ../ && scp ./${TEST_BINARY} ${TEST_DEPLOY}
 	@echo "Delpoyed"
+build_deploy_test: build_test deploy_test

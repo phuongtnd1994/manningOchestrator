@@ -2,6 +2,7 @@ Chapter 05
 CUBE_HOST=localhost CUBE_PORT=5555 go run main.go
 
 curl -v localhost:5555/tasks
+curl -v 172.16.145.128:5555/tasks  
 
 curl -v --request POST \
   --header 'Content-Type: application/json' \
@@ -22,4 +23,13 @@ curl -v --request POST \
   --data '{"ID": "266592cd-960d-4091-981c-8c25c44b1018","State": 2,"Task": {"State": 1,"ID": "266592cd-960d-4091-981c-8c25c44b1018","Name": "test-chapter-5-1","Image": "strm/helloworld-http"}}' \
   http://localhost:5555/tasks
 
+curl -v --request POST \
+  --header 'Content-Type: application/json' \
+  --data '{"ID": "266592cd-960d-4091-981c-8c25c44b1018","State": 2,"Task": {"State": 1,"ID": "266592cd-960d-4091-981c-8c25c44b1018","Name": "test-chapter-5-1","Image": "strm/helloworld-http"}}' \
+  http://172.16.145.128:5555/tasks
+
 curl -v --request DELETE "localhost:5555/tasks/266592cd-960d-4091-981c-8c25c44b1018"
+
+curl -v --request DELETE "172.16.145.128:5555/tasks/266592cd-960d-4091-981c-8c25c44b1018"
+
+/home/testadmin/testoch
