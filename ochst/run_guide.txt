@@ -1,3 +1,5 @@
+ssh testadmin@172.16.145.128
+
 Chapter 05
 CUBE_HOST=localhost CUBE_PORT=5555 go run main.go
 
@@ -33,3 +35,7 @@ curl -v --request DELETE "localhost:5555/tasks/266592cd-960d-4091-981c-8c25c44b1
 curl -v --request DELETE "172.16.145.128:5555/tasks/266592cd-960d-4091-981c-8c25c44b1018"
 
 /home/testadmin/testoch
+
+
+curl localhost:5555/stats|jq .
+curl 172.16.145.128:5555/stats|jq .
