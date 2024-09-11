@@ -39,3 +39,10 @@ curl -v --request DELETE "172.16.145.128:5555/tasks/266592cd-960d-4091-981c-8c25
 
 curl localhost:5555/stats|jq .
 curl 172.16.145.128:5555/stats|jq .
+
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker stop $(docker ps -q)
+docker inspect strm/helloworld-http | grep Architecture
