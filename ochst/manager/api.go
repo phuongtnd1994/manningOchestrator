@@ -15,7 +15,7 @@ type ErrResponse struct {
 type Api struct {
 	Address string
 	Port    int
-	Manger  *Manager
+	Manager *Manager
 	Router  *chi.Mux
 }
 
